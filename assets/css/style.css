@@ -1,0 +1,142 @@
+
+:root {
+  --primary-blue: #0d47a1;
+  --teal: #008080;
+  --light-gray: #f7f9fc;
+  --white: #ffffff;
+  --gold: #D4AF37;
+  --dark-gray: #333333;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: var(--dark-gray);
+  background-color: var(--white);
+  direction: rtl;
+  text-align: right;
+}
+
+header {
+  background-color: var(--primary-blue);
+  color: var(--white);
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 0;
+  margin-right: 15px;
+}
+
+nav ul li a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+nav ul li a:hover {
+  color: var(--gold);
+}
+
+.button-primary {
+  background-color: var(--teal);
+  color: var(--white);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+.button-primary:hover {
+  background-color: var(--primary-blue);
+  color: var(--white);
+}
+
+/* Hero section uses a gradient background instead of an image to avoid text conflicts.
+   The gradient blends the teal and dark blue colors to convey trust and innovation. */
+.hero {
+  background: linear-gradient(to left, var(--teal), var(--primary-blue));
+  color: var(--white);
+  padding: 100px 20px;
+  text-align: center;
+  position: relative;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.55);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+section {
+  padding: 60px 20px;
+}
+
+.section-title {
+  font-size: 28px;
+  color: var(--primary-blue);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.feature-item {
+  flex: 1 1 250px;
+  background-color: var(--light-gray);
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+}
+
+footer {
+  background-color: var(--primary-blue);
+  color: var(--white);
+  text-align: center;
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  nav ul li {
+    margin-right: 0;
+    margin-top: 10px;
+  }
+}
